@@ -1,0 +1,17 @@
+from effective_mobile_lib.application.interface import CommandInterFaceRouter
+
+from effective_mobile_interview.api.interface_routers.index_page import router as index_page_router
+from effective_mobile_interview.api.interface_routers.add_book import router as add_book_router
+from effective_mobile_interview.api.interface_routers.delete_book import router as delete_book_router
+from effective_mobile_interview.api.interface_routers.search_book import router as search_book_router
+from effective_mobile_interview.api.interface_routers.update_book import router as update_book_router
+from effective_mobile_interview.api.interface_routers.get_books import router as get_books_router
+
+
+main_router = CommandInterFaceRouter()
+main_router.include_router(index_page_router)
+main_router.include_router(add_book_router)
+main_router.include_router(delete_book_router)
+main_router.include_router(search_book_router)
+main_router.include_router(update_book_router)
+main_router.include_router(get_books_router)
